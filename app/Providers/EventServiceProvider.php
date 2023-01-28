@@ -16,7 +16,8 @@ class EventServiceProvider extends ServiceProvider
      */
     protected $listen = [
         Registered::class => [
-            SendEmailVerificationNotification::class,
+            // リスナーを登録する
+            'App\Listeners\RegisteredListener',
         ],
     ];
 
