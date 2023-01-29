@@ -4,6 +4,13 @@
 </head>
 <body>
 <h1>ユーザー登録フォーム</h1>
+<ul>
+    @if (count($errors)>0)
+        @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+        @endforeach
+    @endif
+</ul>
 <form name="registform" action="/register" method="post" id="registform">
     {{ csrf_field() }}
     <dl>

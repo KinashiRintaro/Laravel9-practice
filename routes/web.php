@@ -39,3 +39,5 @@ Route::post('/login', [App\Http\Controllers\LoginController::class, 'authenticat
 Route::get('/logout', [App\Http\Controllers\LoginController::class, 'logout'])
     ->middleware('auth')
     ->name('logout');
+
+Route::post('/user/register', 'App\Http\Controllers\UserController@register');
